@@ -35,8 +35,8 @@ def get_comments(url, type, limit):
 downloader, analyzer = initialize()
 
 with st.form("initial-submit"):
-    url = st.text_input(label = "Please input a valid YouTube URL")
-    num_comments = st.slider(label = "Number of comments to analyze", min_value = 10, max_value = 1000, value = 100)
+    url = st.text_input(label = "Please input a valid YouTube URL", value = "https://www.youtube.com/watch?v=gQddtTdmG_8")
+    num_comments = st.slider(label = "Number of comments to analyze", min_value = 10, max_value = 1000, value = 335)
     submit = st.form_submit_button(label = "Analyse", on_click = initial_submit)
 
 if st.session_state.initial_submit:
