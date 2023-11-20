@@ -1,0 +1,8 @@
+vaderSentiment
+youtube-comment-downloader
+pandas
+numpy
+plotly
+stqdm
+streamlit
+pytube
