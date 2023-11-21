@@ -43,7 +43,7 @@ if st.session_state.initial_submit:
     if url[:17] == "https://youtu.be/":
         video_id = url[17:].split("?")[0]
         url = "https://www.youtube.com/watch?v=" + video_id
-    comments = get_comments(url, SORT_BY_POPULAR, num_comments)
+    comments = get_comments(url, SORT_BY_POPULAR, 10)
     text = []
     top_3 = []
     p_sentiment = []
@@ -100,7 +100,7 @@ if st.session_state.initial_submit:
         with col5:
             st.metric(label = "Neutral Sentiment", value = round(neu_sentiment[i], 2))
 
-    comments = get_comments(url, SORT_BY_RECENT, 10)
+    comments = get_comments(url, SORT_BY_RECENT, num_comments)
     text = []
     p_sentiment = []
     n_sentiment = []
