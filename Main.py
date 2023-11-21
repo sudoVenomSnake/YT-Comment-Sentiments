@@ -100,7 +100,7 @@ if st.session_state.initial_submit:
         with col5:
             st.metric(label = "Neutral Sentiment", value = round(neu_sentiment[i], 2))
 
-    comments = get_comments(url, SORT_BY_RECENT, num_comments)
+    comments = get_comments(url, SORT_BY_RECENT, 10)
     text = []
     p_sentiment = []
     n_sentiment = []
