@@ -43,7 +43,6 @@ if st.session_state.initial_submit:
     if url[:17] == "https://youtu.be/":
         video_id = url[17:].split("?")[0]
         url = "https://www.youtube.com/watch?v=" + video_id
-        st.write(url)
     comments = get_comments(url, SORT_BY_POPULAR, num_comments)
     text = []
     top_3 = []
